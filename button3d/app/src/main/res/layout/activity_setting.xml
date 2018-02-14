@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:padding="16dp"
+android:backgroundTint="#E4DCCF"
+android:background="#E4DCCF"
+tools:context=".MainActivity">
+<include
+    layout="@layout/included_main"
+    android:id="@+id/included"
+    />
+
+<RelativeLayout
+
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:layout_alignParentBottom="true"
+    android:layout_alignParentLeft="true"
+    android:layout_alignParentStart="true">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/r3"
+        android:weightSum="3"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <ImageButton
+            android:layout_width="@dimen/width"
+            android:layout_height="@dimen/height"
+            android:layout_margin="6dp"
+            android:layout_weight="1"
+            android:background="@drawable/seletor_botao"
+            android:id="@+id/setting"
+            android:onClick="setClick"
+            android:scaleType="fitCenter"
+            android:src="@drawable/settingimage"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true" />
+
+
+        <Button
+            android:layout_marginRight="6dp"
+            android:layout_marginLeft="6dp"
+            android:layout_marginTop="6dp"
+            android:layout_weight="1"
+            android:layout_width="@dimen/width"
+            android:layout_height="@dimen/height"
+            android:background="@drawable/seletor_botao2"
+            android:text="OK"
+            android:textColor="#FFFFFF"
+            android:textSize="30dp"
+            android:onClick="okButton"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/black3" />
+
+
+        <Button
+            android:layout_margin="6dp"
+            android:layout_width="@dimen/width"
+            android:layout_height="@dimen/height"
+            android:background="@drawable/seletor_botao6"
+            android:layout_weight="1"
+            android:textColor="#FFFFFF"
+            android:text="Score"
+            android:onClick="score"
+            android:textSize="25dp"
+            android:id="@+id/b3"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/r1"
+        android:layout_weight="3"
+        android:layout_above="@+id/r2"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <Button
+            android:layout_margin="6dp"
+            android:layout_width="@dimen/width"
+            android:layout_height="@dimen/height"
+            android:backgroundTint="#cec6c6"
+            android:background="@drawable/seletor_botao"
+            android:id="@+id/b1"
+            android:layout_weight="1"/>
+
+        <Button
+            android:layout_margin="6dp"
+            android:layout_weight="1"
+            android:layout_width="@dimen/width"
+            android:layout_height="@dimen/height"
+            android:background="@drawable/seletor_botao"
+            android:backgroundTint="#cec6c6"
+            android:id="@+id/black1"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true" />
+
+
+        <Button
+            android:layout_width="@dimen/width"
+            android:layout_height="@dimen/height"
+            android:backgroundTint="#cec6c6"
+            android:background="@drawable/seletor_botao2"
+            android:id="@+id/bclear"
+            android:layout_weight="1"
+            android:layout_margin="6dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:textSize="30dp"
+            android:textColor="#ffff"/>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/r2"
+        android:orientation="horizontal"
+        android:layout_weight="3"
+        android:layout_above="@id/r3"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+        <Button
+            android:layout_margin="6dp"
+            android:layout_width="@dimen/width"
+            android:text="-"
+            android:textColor="#FFFFFF"
+            android:textSize="30dp"
+            android:layout_height="70dp"
+            android:background="@drawable/seletor_botao4"
+            android:id="@+id/b2"
+            android:layout_weight="1"/>
+
+        <Button
+            android:layout_marginTop="6dp"
+            android:layout_marginRight="6dp"
+            android:layout_marginLeft="6dp"
+            android:layout_weight="1"
+            android:text="Level 1"
+            android:textColor="#FFFFFF"
+            android:layout_width="100dp"
+            android:layout_height="70dp"
+            android:background="@drawable/seletor_botao5"
+            android:id="@+id/black2"
+            android:textSize="25dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true" />
+        <Button
+            android:layout_margin="6dp"
+            android:layout_weight="1"
+            android:layout_width="@dimen/width"
+            android:layout_height="@dimen/height"
+            android:background="@drawable/seletor_botao4"
+            android:id="@+id/b4"
+            android:text="+"
+            android:textColor="#FFFFFF"
+            android:textSize="30dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true" />
+
+
+    </LinearLayout>
+</RelativeLayout>
+
+</FrameLayout>

@@ -73,6 +73,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         public static final int ACTIVITY_6 = 1006;
         public static final int ACTIVITY_7 = 1007;
         public static final int ACTIVITY_8 = 1008;
+        public  static final int ACTIVITY_9 = 1009;
+        public static final int ACTIVITY_10 = 1010;
+        public static final int ACTIVITY_11 = 1011;
+        public static final int ACTIVITY_12 = 1012;
+        public static final int ACTIVITY_13 = 1013;
+        public static final int ACTIVITY_14 = 1014;
+        public static final int ACTIVITY_15 = 1015;
 
     }
 

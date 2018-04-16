@@ -11,18 +11,17 @@ import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.TextView;
 
-import java.util.ArrayList;
-
-public class Main8Activity extends AppCompatActivity implements  View.OnClickListener {
-    static int goal = 100;
-    static int  result = 99;
-    static int moves = 3 ;
-    static int count8 = 10;
+public class Main14Activity extends AppCompatActivity implements  View.OnClickListener{
+//level-13( level -  24)
+static int goal = 210;
+    static int  result = 0;
+    static int moves = 5 ;
+    static int count13 = 10;
 
     @Override
     protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main8);
+        setContentView(R.layout.activity_main14);
         Button clear=(Button)findViewById(R.id.bclear);
         ImageButton setting =(ImageButton)findViewById(R.id.setting);
         Button black1= (Button)findViewById(R.id.black1);
@@ -39,15 +38,16 @@ public class Main8Activity extends AppCompatActivity implements  View.OnClickLis
         black1.setOnClickListener(this);
         black2.setOnClickListener(this);
         black3.setOnClickListener(this);
-        black1.setText("-8");
+    b2.setOnClickListener( this );
+        black1.setText("-5");
         Result.setText(""+result);
-        black2.setText("x11");
-        black3.setText("<<");
-        Goal.setText("GOAL : 100");
-        Level.setText("LEVEL 8");
+        black2.setText("+5 ");
+        black3.setText("5 ");
+        Goal.setText("GOAL : 210");
+        Level.setText("LEVEL 13");
         b1.setEnabled(false);
-        b2.setEnabled(false);
-        b3.setEnabled(false);
+        b2.setText( "2" );
+        b3.setEnabled( false );
         move.setText("MOVES :"+moves);
         Result.setText(""+result);
         b4.setEnabled(false);
@@ -71,7 +71,7 @@ public class Main8Activity extends AppCompatActivity implements  View.OnClickLis
 
                     final MediaPlayer mp = MediaPlayer.create(this, R.raw.bclick);
                     mp.start();
-                    result = result - 8 ;
+                    result = result -5 ;
                     Result.setText("" + result);
                     --moves;
                     move.setText("MOVES: " + moves);
@@ -81,7 +81,7 @@ public class Main8Activity extends AppCompatActivity implements  View.OnClickLis
 
                     final MediaPlayer mp = MediaPlayer.create(this, R.raw.bclick);
                     mp.start();
-                    result = result * 11;
+                    result = result +5;
                     Result.setText("" + result);
                     --moves;
                     move.setText("MOVES: " + moves);
@@ -91,13 +91,26 @@ public class Main8Activity extends AppCompatActivity implements  View.OnClickLis
 
                     final MediaPlayer mp = MediaPlayer.create(this, R.raw.bclick);
                     mp.start();
-                    result = result / 10;
+                    String A = String.valueOf( result );
+                    A = A + "5";
+                    result = Integer.parseInt( A );
                     Result.setText("" + result);
                     --moves;
                     move.setText("MOVES: " + moves);
                     break;
                 }
+                case R.id.b2 : {
+                    final MediaPlayer mp = MediaPlayer.create(this, R.raw.bclick);
+                    mp.start();
+                    String A = String.valueOf( result );
+                    A = A + "2";
+                    result = Integer.parseInt( A );
+                    Result.setText("" + result);
+                    --moves;
+                    move.setText("MOVES: " + moves);
+                    break;
 
+                }
 
 
             }
@@ -107,12 +120,12 @@ public class Main8Activity extends AppCompatActivity implements  View.OnClickLis
             }
             if (goal == result) {
                 Result.setText("YOU WIN");
-                count8 = count8+10;
-                new Handler().postDelayed(new Runnable() {
+                count13 = count13+10;
+                new Handler().postDelayed( new Runnable() {
                     @Override
                     public void run() {
 
-                        Intent i=new Intent(Main8Activity.this,Main10Activity.class);
+                        Intent i=new Intent(Main14Activity.this,Main15Activity.class);
                         finish();
                         startActivity(i);
                     }
@@ -137,10 +150,10 @@ public class Main8Activity extends AppCompatActivity implements  View.OnClickLis
 
         final MediaPlayer mp = MediaPlayer.create(this, R.raw.bclick);
         mp.start();
-        count8 = count8-5;
+        count13 = count13-5;
 
-        moves = 3;
-        result = 99;
+        moves = 5;
+        result = 0;
         Result.setText("" + result);
         move.setText("MOVES: " + moves);
     }
@@ -149,10 +162,10 @@ public class Main8Activity extends AppCompatActivity implements  View.OnClickLis
 
         final MediaPlayer mp = MediaPlayer.create(this, R.raw.bclick);
         mp.start();
-        Intent i=new Intent(Main8Activity.this,SettingActivity.class);
+        Intent i=new Intent(Main14Activity.this,SettingActivity.class);
         TextView Level=(TextView)findViewById(R.id.level);
-        i.putExtra("level8", count8);
-        i.putExtra("calling-activity", MainActivity.ActivityConstants.ACTIVITY_8);
+        i.putExtra("level13", count13);
+        i.putExtra("calling-activity", MainActivity.ActivityConstants.ACTIVITY_13);
         i.putExtra("textViewText", Level.getText().toString());
         startActivity(i);
     }

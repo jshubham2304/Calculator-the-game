@@ -55,6 +55,11 @@
                 android:layout_height="410dp"
                 android:background="@drawable/rounded_corners_display">
 
+                <ScrollView
+                    android:scrollbars="none"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    >
                 <TableLayout
                     android:layout_margin="22dp"
                     android:layout_width="match_parent"
@@ -231,8 +236,145 @@
                             android:textSize="30dp"
                             />
                     </TableRow>
+                    <TableRow>
+                        <TextView
+                            android:layout_height="wrap_content"
+                            android:layout_width="match_parent"
+                            android:text="Level : 9"
+                            android:layout_weight="1"
+                            android:textAlignment="center"
+                            android:textSize="30dp"
+                            />
+                        <TextView
+                            android:layout_height="wrap_content"
+                            android:layout_width="match_parent"
+                            android:text="N.A."
+                            android:id="@+id/level9"
+                            android:layout_weight="1"
+                            android:textAlignment="center"
+                            android:textSize="30dp"
+                            />
+                    </TableRow>
+                    <TableRow>
+                        <TextView
+                            android:layout_height="wrap_content"
+                            android:layout_width="match_parent"
+                            android:text="Level : 10"
+                            android:layout_weight="1"
+                            android:textAlignment="center"
+                            android:textSize="30dp"
+                            />
+                        <TextView
+                            android:layout_height="wrap_content"
+                            android:layout_width="match_parent"
+                            android:text="N.A."
+                            android:id="@+id/level10"
+                            android:layout_weight="1"
+                            android:textAlignment="center"
+                            android:textSize="30dp"
+                            />
+                    </TableRow>
+                    <TableRow>
+                        <TextView
+                            android:layout_height="wrap_content"
+                            android:layout_width="match_parent"
+                            android:text="Level : 11"
+                            android:layout_weight="1"
+                            android:textAlignment="center"
+                            android:textSize="30dp"
+                            />
+                        <TextView
+                            android:layout_height="wrap_content"
+                            android:layout_width="match_parent"
+                            android:text="N.A."
+                            android:id="@+id/level11"
+                            android:layout_weight="1"
+                            android:textAlignment="center"
+                            android:textSize="30dp"
+                            />
+                    </TableRow>
+                    <TableRow>
+                        <TextView
+                            android:layout_height="wrap_content"
+                            android:layout_width="match_parent"
+                            android:text="Level : 12"
+                            android:layout_weight="1"
+                            android:textAlignment="center"
+                            android:textSize="30dp"
+                            />
+                        <TextView
+                            android:layout_height="wrap_content"
+                            android:layout_width="match_parent"
+                            android:text="N.A."
+                            android:id="@+id/level12"
+                            android:layout_weight="1"
+                            android:textAlignment="center"
+                            android:textSize="30dp"
+                            />
+                    </TableRow>
+                    <TableRow>
+                        <TextView
+                            android:layout_height="wrap_content"
+                            android:layout_width="match_parent"
+                            android:text="Level : 13"
+                            android:layout_weight="1"
+                            android:textAlignment="center"
+                            android:textSize="30dp"
+                            />
+                        <TextView
+                            android:layout_height="wrap_content"
+                            android:layout_width="match_parent"
+                            android:text="N.A."
+                            android:id="@+id/level13"
+                            android:layout_weight="1"
+                            android:textAlignment="center"
+                            android:textSize="30dp"
+                            />
+                    </TableRow>
+                    <TableRow>
+                        <TextView
+                            android:layout_height="wrap_content"
+                            android:layout_width="match_parent"
+                            android:text="Level : 14"
+                            android:layout_weight="1"
+                            android:textAlignment="center"
+                            android:textSize="30dp"
+                            />
+                        <TextView
+                            android:layout_height="wrap_content"
+                            android:layout_width="match_parent"
+                            android:text="N.A."
+                            android:id="@+id/level14"
+                            android:layout_weight="1"
+                            android:textAlignment="center"
+                            android:textSize="30dp"
+                            />
+                    </TableRow>
+
+                    <TableRow>
+                        <TextView
+                            android:layout_height="wrap_content"
+                            android:layout_width="match_parent"
+                            android:text="Level : 15"
+                            android:layout_weight="1"
+                            android:textAlignment="center"
+                            android:textSize="30dp"
+                            />
+                        <TextView
+                            android:layout_height="wrap_content"
+                            android:layout_width="match_parent"
+                            android:text="N.A."
+                            android:id="@+id/level15"
+                            android:layout_weight="1"
+                            android:textAlignment="center"
+                            android:textSize="30dp"
+
+                            />
+                    </TableRow>
+
                 </TableLayout>
 
+                </ScrollView>
             </RelativeLayout>
         <Button
             android:layout_width="wrap_content"
@@ -240,6 +382,7 @@
             android:text="Back"
             android:id="@+id/back"
             android:background="#353E3D"
+            android:layout_above="@id/back"
             android:onClick="back"
             android:textColor="#FFFFFF"
             android:layout_alignParentBottom="true"

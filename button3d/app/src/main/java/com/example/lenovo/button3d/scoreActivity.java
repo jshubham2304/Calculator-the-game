@@ -31,6 +31,13 @@ public class scoreActivity extends AppCompatActivity {
         TextView level6 = (TextView) findViewById(R.id.level6);
         TextView level7 = (TextView) findViewById(R.id.level7);
         TextView level8 = (TextView) findViewById(R.id.level8);
+        TextView level9 = (TextView) findViewById(R.id.level9);
+        TextView level10 = (TextView) findViewById(R.id.level10);
+        TextView level11 = (TextView) findViewById(R.id.level11);
+        TextView level12 = (TextView) findViewById(R.id.level12);
+        TextView level13 = (TextView) findViewById(R.id.level13);
+        TextView level14 = (TextView) findViewById(R.id.level14);
+        TextView level15 = (TextView) findViewById(R.id.level15);
         final MediaPlayer mp = MediaPlayer.create(this, R.raw.bclick);
         mp.start();
         List<Integer> list = getIntent().getExtras().getIntegerArrayList("code");
@@ -42,6 +49,14 @@ public class scoreActivity extends AppCompatActivity {
         level6.setText(""+list.get(5));
         level7.setText(""+list.get(6));
         level8.setText(""+list.get(7));
+        level9.setText( ""+list.get( 8 ) );
+        level10.setText( ""+list.get( 9 ) );
+        level11.setText( ""+list.get( 10 ) );
+        level12.setText( ""+list.get( 11 ) );
+        level13.setText( ""+list.get( 12 ) );
+        level14.setText( ""+list.get( 13 ) );
+        level5.setText( ""+list.get( 14 ) );
+
 
 
     }

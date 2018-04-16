@@ -13,6 +13,13 @@ import android.widget.TextView;
 import java.util.ArrayList;
 import java.util.List;
 
+import static com.example.lenovo.button3d.Main10Activity.count9;
+import static com.example.lenovo.button3d.Main11Activity.count10;
+import static com.example.lenovo.button3d.Main12Activity.count11;
+import static com.example.lenovo.button3d.Main13Activity.count12;
+import static com.example.lenovo.button3d.Main14Activity.count13;
+import static com.example.lenovo.button3d.Main15Activity.count14;
+import static com.example.lenovo.button3d.Main16Activity.count15;
 import static com.example.lenovo.button3d.Main2Activity.count2;
 import static com.example.lenovo.button3d.Main3Activity.count3;
 import static com.example.lenovo.button3d.Main4Activity.count4;
@@ -38,6 +45,14 @@ public class SettingActivity extends AppCompatActivity implements View.OnClickLi
         public static final int ACTIVITY_6 = 1006;
         public static final int ACTIVITY_7 = 1007;
         public static final int ACTIVITY_8 = 1008;
+        public  static final int ACTIVITY_9 = 1009;
+        public static final int ACTIVITY_10 = 1010;
+        public static final int ACTIVITY_11 = 1011;
+        public static final int ACTIVITY_12 = 1012;
+        public static final int ACTIVITY_13 = 1013;
+        public static final int ACTIVITY_14 = 1014;
+        public static final int ACTIVITY_15 = 1015;
+
     }
 
 
@@ -97,6 +112,13 @@ public class SettingActivity extends AppCompatActivity implements View.OnClickLi
         scoreArray.add(getIntent().getIntExtra("level6", count6));
         scoreArray.add(getIntent().getIntExtra("level7", count7));
         scoreArray.add(getIntent().getIntExtra("level8", count8));
+        scoreArray.add(getIntent().getIntExtra("level9", count9));
+        scoreArray.add(getIntent().getIntExtra("level10", count10));
+        scoreArray.add(getIntent().getIntExtra("level11", count11));
+        scoreArray.add(getIntent().getIntExtra("level12", count12));
+        scoreArray.add(getIntent().getIntExtra("level13", count13));
+        scoreArray.add(getIntent().getIntExtra("level14", count14));
+        scoreArray.add(getIntent().getIntExtra("level15", count15));
 
 
     }
@@ -139,6 +161,34 @@ public class SettingActivity extends AppCompatActivity implements View.OnClickLi
                 break;
             case ActivityConstants.ACTIVITY_8:
                 intent = new Intent(SettingActivity.this,Main8Activity.class);
+                startActivity(intent);
+                break;
+            case ActivityConstants.ACTIVITY_9:
+                intent = new Intent(SettingActivity.this,Main10Activity.class);
+                startActivity(intent);
+                break;
+            case ActivityConstants.ACTIVITY_10:
+                intent = new Intent(SettingActivity.this,Main11Activity.class);
+                startActivity(intent);
+                break;
+            case ActivityConstants.ACTIVITY_11:
+                intent = new Intent(SettingActivity.this,Main12Activity.class);
+                startActivity(intent);
+                break;
+            case ActivityConstants.ACTIVITY_12:
+                intent = new Intent(SettingActivity.this,Main13Activity.class);
+                startActivity(intent);
+                break;
+            case ActivityConstants.ACTIVITY_13:
+                intent = new Intent(SettingActivity.this,Main14Activity.class);
+                startActivity(intent);
+                break;
+            case ActivityConstants.ACTIVITY_14:
+                intent = new Intent(SettingActivity.this,Main15Activity.class);
+                startActivity(intent);
+                break;
+            case ActivityConstants.ACTIVITY_15:
+                intent = new Intent(SettingActivity.this,Main16Activity.class);
                 startActivity(intent);
                 break;
         }
@@ -206,6 +256,55 @@ public class SettingActivity extends AppCompatActivity implements View.OnClickLi
                 startActivity(intent);
                 break;
             }
+            case 9: {
+                level = 9;
+                mp.start();
+                Intent intent = new Intent(SettingActivity.this, Main10Activity.class);
+                startActivity(intent);
+                break;
+            }
+            case 10: {
+                level = 10;
+                mp.start();
+                Intent intent = new Intent(SettingActivity.this, Main11Activity.class);
+                startActivity(intent);
+                break;
+            }
+            case 11: {
+                level = 11;
+                mp.start();
+                Intent intent = new Intent(SettingActivity.this, Main12Activity.class);
+                startActivity(intent);
+                break;
+            }
+            case 12: {
+                level = 12;
+                mp.start();
+                Intent intent = new Intent(SettingActivity.this, Main13Activity.class);
+                startActivity(intent);
+                break;
+            }
+            case 13: {
+                level = 13;
+                mp.start();
+                Intent intent = new Intent(SettingActivity.this, Main14Activity.class);
+                startActivity(intent);
+                break;
+            }
+            case 14: {
+                level = 14;
+                mp.start();
+                Intent intent = new Intent(SettingActivity.this, Main15Activity.class);
+                startActivity(intent);
+                break;
+            }
+            case 15: {
+                level = 15;
+                mp.start();
+                Intent intent = new Intent(SettingActivity.this, Main16Activity.class);
+                startActivity(intent);
+                break;
+            }
         }
     }
 
@@ -213,7 +312,7 @@ public class SettingActivity extends AppCompatActivity implements View.OnClickLi
     public void onClick(View v) {
         Button black2 = (Button) findViewById(R.id.black2);
 
-        if (level >= 1 && level<=8) {
+        if (level >= 1 && level<=15) {
 
             switch (v.getId()) {
 
@@ -232,7 +331,7 @@ public class SettingActivity extends AppCompatActivity implements View.OnClickLi
 
                     final MediaPlayer mp = MediaPlayer.create(this, R.raw.bclick);
                     mp.start();
-                    if(level!=8) {
+                    if(level!=15) {
                         level++;
                         black2.setText("Level" + level);
                     }
